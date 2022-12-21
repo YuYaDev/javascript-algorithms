@@ -9,15 +9,11 @@
 */
 
 function anagram(str1, str2) {
-    const firstWord = str1.split('').map(function (letter) {
-        return letter.toLowerCase();
-    }).join('')
+    const firstWord = str1.toLowerCase()
 
-    const secondWord = str2.split('').map(function (letter) {
-        return letter.toLowerCase();
-    }).join('')
+    const secondWord = str2.toLowerCase()
 
-    if (firstWord === secondWord) {
+    if ((firstWord === secondWord) || (firstWord.length !== secondWord.length)) {
         return false
     }
     return firstWord.split('').sort().join('') === secondWord.split('').sort().join('');

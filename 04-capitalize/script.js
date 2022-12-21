@@ -7,16 +7,19 @@
 */
 
 function capitalize(str) {
-    if (str === '') {
-        return '';
-    } else if (str.split(' ').length > 2) {
-        return str.split(' ').map(function (word) {
-            return word[0].toUpperCase() + word.slice(1);
-        }).join(' ');
+    if (str.trim().length < 2) {
+        return str.trim().toUpperCase();
     }
-    return str[0].toUpperCase() + str.slice(1);
+
+    return str.trim().split(' ').map(function (word) {
+        word = word.trim()
+        if (word !== '') {
+            return word[0].toUpperCase() + word.slice(1);
+        }
+    }).join(' ');
+
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(capitalize('')); // "Молодость Всё Простит"
+console.log(capitalize('sолодость  xВсё  vростит')); // "Молодость Всё Простит"

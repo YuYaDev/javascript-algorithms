@@ -11,12 +11,20 @@
 */
 
 function fizzBuzz(num) {
+
+    const equalsFive = (num) => {
+        return num % 5 === 0;
+    }
+    const equalsThree = (num) => {
+        return num % 3 === 0;
+    }
+
     for (let i = 1; i <= num; i++) {
-        if ((i % 3 === 0) && (i % 5 === 0)) {
+        if (equalsThree(i) && equalsFive(i)) {
             console.log('fizzbuzz');
-        } else if (i % 3 === 0) {
+        } else if (equalsThree(i)) {
             console.log('fizz');
-        } else if (i % 5 === 0) {
+        } else if (equalsFive(i)) {
             console.log('buzz');
         } else {
             console.log(i);

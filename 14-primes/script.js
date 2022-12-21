@@ -5,16 +5,24 @@
  * Функция должна возвращать массив простых чисел от 2 до n.
  * 
 */
+function isPrime(n) {
+    if (n <= 1) {
+        return false
+    }
+    for (let divider = 2 ; divider <= Math.floor(n / 2); divider++) {
+        if (n % divider === 0) {
+            return false
+        }
+    }
+    return true
+}
+
 
 function primes(num) {
-    let primesArray = []
-    for (let i = 2; i <= num; i++) {
-
-        for (let j = 1 ; j < Math.floor(i / 2); j++) {
-            if (i % j !== 0) {
-                primesArray.push(i);
-                break;
-            }
+    const primesArray = []
+    for (let i = 0; i <= num; i++) {
+        if (isPrime(i)) {
+            primesArray.push(i);
         }
     }
 
