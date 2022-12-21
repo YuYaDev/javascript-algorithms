@@ -10,13 +10,15 @@
 */
 
 function isPrime(n) {
-    // Напишите код здесь
+    for (let i = 2 ; i < Math.floor(n / 2); i++) {
+        if ((n % i === 0) || (n === 0) ||(n === 1)) {
+            return false
+        }
+    }
+    return true
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(isPrime(0)); // false
-console.log(isPrime(1)); // false
-console.log(isPrime(3)); // true
-console.log(isPrime(6)); // false
-console.log(isPrime(17)); // true
+console.log(isPrime(0)); // true
+console.log(isPrime(1)); // true

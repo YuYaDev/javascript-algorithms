@@ -8,7 +8,13 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    let uniqueArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (!uniqueArr.includes(arr[i])) {
+            uniqueArr.push(arr[i]);
+        }
+    }
+    return uniqueArr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

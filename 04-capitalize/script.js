@@ -7,9 +7,16 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+    if (str === '') {
+        return '';
+    } else if (str.split(' ').length > 2) {
+        return str.split(' ').map(function (word) {
+            return word[0].toUpperCase() + word.slice(1);
+        }).join(' ');
+    }
+    return str[0].toUpperCase() + str.slice(1);
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(capitalize('молодость всё простит')); // "Молодость Всё Простит"
+console.log(capitalize('')); // "Молодость Всё Простит"

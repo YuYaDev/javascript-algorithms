@@ -9,7 +9,14 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    let firstNumber = 0;
+    let secondNumber = 1;
+    for (let i = 2; i <= n; i++) {
+        let thirdNumber = firstNumber + secondNumber;
+        firstNumber = secondNumber;
+        secondNumber = thirdNumber;
+    }
+    return firstNumber;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
