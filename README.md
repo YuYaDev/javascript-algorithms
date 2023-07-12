@@ -16,5 +16,3 @@
 12. Посчитать количество нулей
 13. Сумма двух
 14. Простые числа
-
-Ссылка на Github pages - https://yuyadev.github.io/javascript-algorithms/
